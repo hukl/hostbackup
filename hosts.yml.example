@@ -1,0 +1,10 @@
+hosts:
+  example:
+    hostname: my.example-server.com
+    username: joe
+    backup_paths: ["/usr/local/etc", "/etc/rc.conf", "/etc/namedb"]
+
+  another_example:
+    hostname: another.example-server.com
+    username: peter
+    backup_paths: ["/usr/local/etc", "/etc/rc.conf", "/var/www/project/settings"]
