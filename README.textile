@@ -14,7 +14,7 @@ h2. Instructions
 Copy the hosts.yml.example to your desired backup directory/hosts.yml and modify
 it to suit you servers.
 
-Currently it only works with public key authentication. If you don't want to
+Currently it works best with public key authentication. If you don't want to
 enter your passphrase on every host I recommend using a ssh-agent for that
 or to use special backup keys without a passphrase.
 
