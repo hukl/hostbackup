@@ -1,2 +1,27 @@
-h1. Introduction:w
+h1. Introduction
+
+This is a small utility intended to create backups of server config files with
+ease but it allows to backup any files.
+
+When you manage several servers or other remote machines and want to have all
+the config files in a safe place, versioned with git, this might be for you.
+
+It works with minimal requirements. Basically you need an sshd running on your
+remote machines and you need git and scp locally.
+
+h2. Instructions
+
+Copy the hosts.yml.example to your desired backup directory/hosts.yml and modify
+it to suit you servers.
+
+Currently it only works with public key authentication. If you don't want to
+enter your passphrase on every host I recommend using a ssh-agent for that
+or to use special backup keys without a passphrase.
+
+Run:
+
+<pre><code>sudo ruby backup.rb /absolute/path/to/backup/dir</code></pre>
+
+Sudo is needed because the transferred files most likely have permissions
+and guids other than the user you are running this script with.
 
