@@ -2,9 +2,10 @@ require 'fileutils'
 require 'yaml'
 
 BackupFolder = ARGV[0]
-config = YAML.load_file( File.join(BackupFolder, 'hosts.yml' ) )
 
 raise "Backup dir does not exist" unless File.exists? BackupFolder
+
+config = YAML.load_file( File.join(BackupFolder, 'hosts.yml' ) )
 
 config["hosts"].each do |key, host|
   puts host.inspect
